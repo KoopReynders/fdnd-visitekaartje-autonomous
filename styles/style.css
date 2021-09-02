@@ -1,0 +1,151 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+* {
+    box-sizing: border-box;
+  }
+body{
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  perspective: 1000px;
+}
+main{ /* card */
+  width: 20em;
+  height: 30em;
+  background: url(/assets/bg.jpg) black;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /object-fit: none;
+  border-radius: 1rem;
+  box-shadow: rgba(17, 12, 46, 0.5) 0px 48px 100px 0px, 
+    inset 0 0 0 10px black, 
+    inset 0 0 0 12px white;
+
+
+  /transform: rotateY(-30deg);
+  /transform-origin: top right;
+}
+h1{ /* titel */
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: normal;
+  font-size: 1.1em;
+  color: white;
+  margin: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+  /* background: pink; */
+}
+section#kop{ 
+  position: relative;
+}
+img{ /* kop img */
+  width: 100%;
+  border-radius: 1rem;
+  padding: 12px;
+}
+div#hit{ /* hit */
+  position: absolute;
+  top: 52%;
+  left: 19%;
+  padding: 1rem;
+}
+div#blup{ /* blup ding */
+  margin: 0;
+  line-height: 777rem;
+  width: 2rem; height: 2rem;
+  background: rgba(255,255,255,0.2);
+  border: 0.1em solid white;
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+aside{ /* extra info */
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  color: whitesmoke;
+  padding: 1em 2em;
+  width: 20rem;
+  height: 30rem;
+  background: url(/assets/bg.jpg) black;
+  background-size: cover;
+
+  border-radius: 1rem;
+
+  box-shadow: rgba(17, 12, 46, 0.5) 0px 48px 100px 0px, 
+    inset 0 0 0 10px black, 
+    inset 0 0 0 12px white;
+
+  /transform: rotateY(30deg) translateX(12px);
+  /transform-origin: top left;
+
+  /display: none;
+}
+
+
+
+
+footer{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  color: whitesmoke;
+  padding: 1em 2em;
+  width: 20rem;
+  height: 30rem;
+  background: url(/assets/bg.jpg) black;
+  background-size: cover;
+  border-radius: 1rem;
+  box-shadow: rgba(17, 12, 46, 0.5) 0px 48px 100px 0px, 
+  inset 0 0 0 10px black, 
+  inset 0 0 0 12px white;
+
+}
+
+
+h2{
+  margin-bottom: 0;
+}
+p{
+  margin-top: 0;
+}  
+a{
+  color: white;
+}
+a:hover, a:focus{
+  background: whitesmoke;
+  color: black;
+}
+
+.rollover{
+  background: rgba(255,255,255,0.9);
+}
+.hide{
+    opacity: 0;
+}
+.cursorpointer{
+  cursor: pointer;
+}
+.cursornone{
+  cursor: none;
+}
