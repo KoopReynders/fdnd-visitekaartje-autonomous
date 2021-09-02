@@ -1,7 +1,7 @@
 # Visitekaartje 
 
 ## Beschrijving
-Visitekaartje met contactgegevesn voor FDND
+Visitekaartje met contactgegevens voor de FDND Squad 2021.
 <!-- Voeg een link toe naar Github Pages 🌐-->
 <a href="https://koopreynders.github.io/fdnd-visitekaartje-autonomous/">https://koopreynders.github.io/fdnd-visitekaartje-autonomous/</a>
 <!-- Voeg een mooie poster visual toe 📸 -->
