@@ -12,10 +12,11 @@ var hapsec = 0.160; //haphaphap animatie in seconden
 var reset; //timeout na klik
 var resetsec = 8; //timeout reset in seconden, hoe lang iss de muis niet zichtbaar
 
-
+var meer = document.querySelector("button+img");
 document.querySelector("button").onclick = function() {
     console.log("click click click");
     this.classList.add("none");
+    meer.classList.add("none");
     container.classList.add("move");
 }
 

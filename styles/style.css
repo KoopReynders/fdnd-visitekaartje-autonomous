@@ -72,10 +72,15 @@ button:active{
   box-shadow: inset -1px -1px #fff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px grey;
   padding: 2px 11px 0 13px;
 }
+button+img{
+  position: absolute;
+  right: -8rem;
+  bottom: 0.5rem;
+}
 section#kop{ 
   position: relative;
 }
-img{ /* kop img */
+section img{ /* kop img */
   width: 100%;
   border-radius: 1rem;
   padding: 12px;
