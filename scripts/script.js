@@ -13,6 +13,15 @@ var reset; //timeout na klik
 var resetsec = 8; //timeout reset in seconden, hoe lang iss de muis niet zichtbaar
 
 
+document.querySelector("button").onclick = function() {
+    console.log("click click click");
+    this.classList.add("none");
+    container.classList.add("move");
+}
+
+
+
+
 function happer(){
     kopimg.src=kop2; //mond open
     blup.classList.add("rollover"); //blup ding wit maken met rollover

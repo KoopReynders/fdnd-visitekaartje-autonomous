@@ -11,7 +11,7 @@ body{
   min-width: 60em;
   margin: 0 auto;
   padding: 0;
-  /background: #efefef;
+  /background: pink;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +34,11 @@ main{ /* card */
     inset 0 0 0 10px black, 
     inset 0 0 0 12px white;
 
-  /transform: rotateY(-20deg);
+  z-index: 3;
+  transition: all 0.5s ease;
+}
+.move main {
+  transform: rotateY(-20deg);
 }
 h1{ /* titel */
   font-family: 'Source Sans Pro', helvetica, arial, sans-serif;
@@ -45,6 +49,28 @@ h1{ /* titel */
   margin-bottom: 2rem;
   text-align: center;
   /* background: pink; */
+}
+button{
+  position: absolute;
+  right: -7rem;
+  bottom: -2rem;
+  
+  /* 98.css https://github.com/jdan/98.css */
+  background: silver;
+  box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf;
+  border: none;
+  border-radius: 0;
+  min-height: 23px;
+  min-width: 75px;
+  padding: 0 12px;
+  font-family: "Pixelated MS Sans Serif",Arial;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+}
+button:active{
+  box-shadow: inset -1px -1px #fff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px grey;
+  padding: 2px 11px 0 13px;
 }
 section#kop{ 
   position: relative;
@@ -97,8 +123,14 @@ aside{ /* extra info */
     inset 0 0 0 10px black, 
     inset 0 0 0 12px white;
 
+  z-index: 2;
+  margin-left: -20em;
+  transform:rotate(-4deg);
+  transition: all 0.5s ease;
+}
+.move aside {
+  margin-left: 0;
   transform: rotateY(20deg) translateX(-20px);
-  display: none;
 }
 
 footer{
@@ -107,7 +139,7 @@ footer{
   font-size: 1em;
   color: whitesmoke;
   padding: 1em 2em;
-  width: 18rem;
+  width: 20rem;
   height: 30rem;
   background: url(/assets/bg.jpg) black;
   background-size: cover;
@@ -116,8 +148,15 @@ footer{
   inset 0 0 0 10px black, 
   inset 0 0 0 12px white;
 
+  z-index: 1;
+  margin-left: -20em;
+  transform:rotate(10deg);
+  transition: all 0.5s ease 0.8s;
+}
+.move footer {
+  margin-left: 0;
+  width: 18rem;
   transform: rotateY(-20deg) translateX(-40px);
-  display:none;
 }
 
 h2{
@@ -143,6 +182,9 @@ li{
 }
 .hide{
     opacity: 0;
+}
+.none{
+  display: none;
 }
 .cursorpointer{
   cursor: pointer;
