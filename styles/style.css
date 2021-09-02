@@ -30,7 +30,7 @@ main{ /* card */
     inset 0 0 0 12px white;
 
 
-  /transform: rotateY(-30deg);
+  transform: rotateY(-20deg);
   /transform-origin: top right;
 }
 h1{ /* titel */
@@ -96,10 +96,10 @@ aside{ /* extra info */
     inset 0 0 0 10px black, 
     inset 0 0 0 12px white;
 
-  /transform: rotateY(30deg) translateX(12px);
+  transform: rotateY(20deg) translateX(-20px);
   /transform-origin: top left;
 
-  display: none;
+  /display: none;
 }
 
 
@@ -120,7 +120,9 @@ footer{
   inset 0 0 0 10px black, 
   inset 0 0 0 12px white;
 
-  display: none;
+  transform: rotateY(-20deg) translateX(-40px);
+  /transform-origin: top left;
+  /display: none;
 }
 
 
