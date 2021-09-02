@@ -3,17 +3,22 @@
 * {
     box-sizing: border-box;
   }
-body{
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
+html{
   background: whitesmoke;
+}
+body{
+  overflow-y: scroll;
+  min-width: 60em;
+  margin: 0 auto;
+  padding: 0;
+  /background: #efefef;
   display: flex;
   justify-content: center;
   align-items: center;
 
   perspective: 1000px;
 }
+
 main{ /* card */
   width: 20em;
   height: 30em;
@@ -29,14 +34,12 @@ main{ /* card */
     inset 0 0 0 10px black, 
     inset 0 0 0 12px white;
 
-
-  transform: rotateY(-20deg);
-  /transform-origin: top right;
+  /transform: rotateY(-20deg);
 }
 h1{ /* titel */
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pro', helvetica, arial, sans-serif;
   font-weight: normal;
-  font-size: 1.1em;
+  font-size: 1.06em;
   color: white;
   margin: 0;
   margin-bottom: 2rem;
@@ -59,8 +62,8 @@ div#hit{ /* hit */
 }
 div#blup{ /* blup ding */
   margin: 0;
-  line-height: 777rem;
-  width: 2rem; height: 2rem;
+  width: 2rem; 
+  height: 2rem;
   background: rgba(255,255,255,0.2);
   border: 0.1em solid white;
   border-radius: 50%;
@@ -89,18 +92,14 @@ aside{ /* extra info */
   height: 30rem;
   background: url(/assets/bg.jpg) black;
   background-size: cover;
-
   border-radius: 1rem;
-
   box-shadow: rgba(17, 12, 46, 0.5) 0px 48px 100px 0px, 
     inset 0 0 0 10px black, 
     inset 0 0 0 12px white;
 
   transform: rotateY(20deg) translateX(-20px);
+  display: none;
 }
-
-
-
 
 footer{
   font-family: 'Source Sans Pro', sans-serif;
@@ -108,7 +107,7 @@ footer{
   font-size: 1em;
   color: whitesmoke;
   padding: 1em 2em;
-  width: 20rem;
+  width: 18rem;
   height: 30rem;
   background: url(/assets/bg.jpg) black;
   background-size: cover;
@@ -118,8 +117,8 @@ footer{
   inset 0 0 0 12px white;
 
   transform: rotateY(-20deg) translateX(-40px);
+  display:none;
 }
-
 
 h2{
   margin-bottom: 0;
@@ -134,7 +133,11 @@ a:hover, a:focus{
   background: whitesmoke;
   color: black;
 }
-
+li{
+  margin-top: 0;
+  padding-top: 0;
+  background: pink;
+}
 .rollover{
   background: rgba(255,255,255,0.9);
 }
