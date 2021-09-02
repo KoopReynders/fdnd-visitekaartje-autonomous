@@ -99,7 +99,7 @@ aside{ /* extra info */
   /transform: rotateY(30deg) translateX(12px);
   /transform-origin: top left;
 
-  /display: none;
+  display: none;
 }
 
 
@@ -120,6 +120,7 @@ footer{
   inset 0 0 0 10px black, 
   inset 0 0 0 12px white;
 
+  display: none;
 }
 
 
