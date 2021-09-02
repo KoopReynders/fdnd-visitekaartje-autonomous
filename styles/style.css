@@ -75,7 +75,8 @@ button:active{
 button+img{
   position: absolute;
   right: -8rem;
-  bottom: 0.5rem;
+  bottom: -0.5rem;
+  transform: scale(0.6);
 }
 section#kop{ 
   position: relative;
