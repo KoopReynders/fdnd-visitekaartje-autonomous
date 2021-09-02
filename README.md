@@ -9,23 +9,16 @@ Visitekaartje met contactgegevens voor de FDND Squad 2021.
 
 
 
-## Inhoudsopgave
-
-- [Titel](#titel)
-  * [Beschrijving](#beschrijving)
-  * [Kenmerken](#kenmerken)
-  * [Installatie](#installatie)
-  * [Gebruik](#gebruik)
-  * [Bronnen](#bronnen)
-  * [Licentie](#licentie)
-
-## Kenmerken
-
-## Installatie
-
-## Gebruik
-
 ## Bronnen
+
+Fontje van Google: Source Sans Pro. 
+Designed by Paul D. Hunt. 
+https://fonts.google.com/specimen/Source+Sans+Pro
+
+Windows 98 button style van 98.CSS
+https://jdan.github.io/98.css/
+
+
 
 ## Licentie
 
