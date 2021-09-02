@@ -72,11 +72,33 @@ button:active{
   box-shadow: inset -1px -1px #fff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px grey;
   padding: 2px 11px 0 13px;
 }
-button+img{
+img[src*=meer]{
   position: absolute;
   right: -8rem;
   bottom: -0.5rem;
   transform: scale(0.6);
+}
+img[src*=watisdat]{
+  position: absolute;
+  left: -15rem;
+  top: 10rem;
+  transform: scale(0.85);
+  opacity: 0;
+  animation: slidein 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 9s;
+}
+@keyframes slidein {
+  from {
+    opacity: 0;
+    left: -15rem;
+  }
+
+  to {
+    opacity: 1;
+    left: -13rem;
+  }
 }
 section#kop{ 
   position: relative;
