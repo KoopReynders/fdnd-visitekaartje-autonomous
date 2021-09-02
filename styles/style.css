@@ -97,9 +97,6 @@ aside{ /* extra info */
     inset 0 0 0 12px white;
 
   transform: rotateY(20deg) translateX(-20px);
-  /transform-origin: top left;
-
-  /display: none;
 }
 
 
@@ -121,8 +118,6 @@ footer{
   inset 0 0 0 12px white;
 
   transform: rotateY(-20deg) translateX(-40px);
-  /transform-origin: top left;
-  /display: none;
 }
 
 
