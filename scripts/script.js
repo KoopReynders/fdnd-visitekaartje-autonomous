@@ -4,29 +4,31 @@ var container = document.querySelector("body");
 var hit = document.querySelector("div#hit"); //hit area voor de blup
 var blup = document.querySelector("div#blup"); //het ronde blup ding
 var kopimg = document.querySelector("section#kop img"); //img met de kop
-var kop1 ="assets/KOP1.JPG"; //mond hap hap
-var kop2 ="assets/KOP2.JPG"; //mond open
-var kop3 ="assets/KOP3.JPG"; //mond
+var kop1 ="assets/KOP1.JPG"; //kop mond hap hap
+var kop2 ="assets/KOP2.JPG"; //kop mond open
+var kop3 ="assets/KOP3.JPG"; //kop
 var hap; //timeout voor de hap
 var hapsec = 0.160; //haphaphap animatie in seconden
 var reset; //timeout na klik
 var resetsec = 8; //timeout reset in seconden, hoe lang iss de muis niet zichtbaar
+var meer = document.querySelector("img[src*=meer]"); //tooltip plaatje "meer" 
+var button = document.querySelector("button"); //button voor meer info
+var watisdat = document.querySelector("img[src*=watisdat]"); //tooltip plaatje "watisdat"
 
-//onclick meer informatie
-var meer = document.querySelector("button+img");
-document.querySelector("button").onclick = function() {
-    console.log("click click click");
-    this.classList.add("none");
-    meer.classList.add("none");
+function showinfo(){
+    button.classList.add("none"); //button weghalen
+    meer.classList.add("none"); //tootlip plaatje"meer" weghalen
     container.classList.add("move");
     wegmetwatisdat();
 }
-
-function wegmetwatisdat(){
-    var watisdat = document.querySelector("img[src*=watisdat]"); //tooltip die na een aantal seconden verschijnt
+function hideinfo(){
+    button.classList.remove("none"); //button weghalen
+    meer.classList.remove("none"); //tootlip plaatje"meer" weghalen
+    container.classList.remove("move");
+}
+function wegmetwatisdat(){ //tooltip die na een aantal seconden verschijnt weghalen
     watisdat.classList.add("none"); //tooltip op display none zetten na een een mousover of klik op info
 }
-
 function haphaphap() { //muis wordt opgegeten met een hap
     kopimg.src = kop1 //mond hap hap
     hit.removeEventListener("mouseover", happer); //onmouseover weghalen
@@ -48,21 +50,24 @@ function setup(){
     container.classList.remove("cursornone");
     clearTimeout(hap);
     clearTimeout(reset);
-}
-setup();
 
-// var my_image2 = new Image();
-// // notify the user that the image has been preloaded, and reveal the
-// // button to use the preloaded image
-// function notify()  {
-//     document.getElementById('preloadbutton2').style.display = 'none';
-//     document.getElementById('after_preload').style.display = 'block';
-// }
-// function preload() {
-//     my_image2.onload = notify;
-//     my_image2.src = 'bigsaturn.jpg';
-// }
-// // using only the file name, we can take advantage of the preloaded image
-// function use_preloaded_image() {
-//     document.getElementById('saturnplaceholder').src = 'bigsaturn.jpg';
-// }
+    switch(window.location.hash) {
+        case "#info":
+            console.log("INFO")
+            showinfo();
+          break;
+        default:
+            console.log("ENTREE")
+            hideinfo();
+      }
+}
+//hash #info springt naar de info state of entree in setup functie
+window.addEventListener("hashchange", function(){
+    console.log("hashchange !",window.location.hash);
+    setup();
+});
+button.onclick = function() {
+    window.location.href='#info';
+}
+//Lets GO
+setup();
