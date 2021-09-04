@@ -62,7 +62,7 @@ function setup(){
       }
 }
 //hash #info springt naar de info state of entree in setup functie
-window.addEventListener("hashchange", function(){
+window.addEventListener("hashchange", function(){ 
     console.log("hashchange !",window.location.hash);
     setup();
 });
@@ -71,3 +71,23 @@ button.onclick = function() {
 }
 //Lets GO
 setup();
+
+
+/* BRONNEN
+https://medium.com/@nagachaitanyakonada/javascript-window-history-pushstate-tutorial-56e2126eaff1
+https://developer.mozilla.org/en-US/docs/Web/API/HashChangeEvent
+
+https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
+
+https://css-tricks.com/video-screencasts/150-hey-designers-know-one-thing-javascript-recommend/
+https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
+https://developer.mozilla.org/en-US/docs/web/api/eventlistener
+https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+
+
+
+
+
+*/
